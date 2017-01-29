@@ -1,0 +1,53 @@
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Instagram Searcher</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+    <link rel="stylesheet" href="style/animate.min.css">
+</head>
+<body data-ng-app="searchApp">
+<div class="container-fluid" data-ng-controller="searchCtrl">
+    <div class="text-center">
+        <div class="row">
+            <img  src="images/logo.png">
+        </div>
+        <div class="row">
+            <form name="searchForm" class="form-inline" ng-submit="search()" novalidate>
+                <div class="control-group"
+                     ng-class="{'has-error': (searchForm.$invalid && searchForm.$submitted),
+                                'has-success':(searchForm.$valid && searchForm.$submitted)}">
+                <input type="text" name="queryVal"
+                       ng-required="true" data-ng-model="query" ng-minlength="2"
+                       class="form-control" placeholder="Enter a tag to search">
+                <button class="btn btn-default">Submit</button>
+                </div>
+            </form>
+        </div>
+        <div class="row">
+            <p><label>{{queryText}}</label></p>
+            <p><label>{{numberOfPhotos}}</label></p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="container-fluid">
+            <table class="table-responsive">
+                <tr class="col-xs-4 animated bounceInUp"
+                    data-ng-repeat="photo in photos | orderBy: photo.likes">
+                    <td>
+                        <p> <a ng-href="{{photo.link}}">
+                            <img data-ng-src="{{photo.source}}">
+                        </a></p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+<script src="https://code.angularjs.org/1.4.7/angular.min.js" type="text/javascript"></script>
+<script src="https://code.angularjs.org/1.4.7/angular-animate.min.js" type="text/javascript"></script>
+<script src="app/app.js" type="text/javascript"></script>
+<script src="app/config.js" type="text/javascript"></script>
+<script src="app/search-ctrl.js" type="text/javascript"></script>
+</body>
+</html>
