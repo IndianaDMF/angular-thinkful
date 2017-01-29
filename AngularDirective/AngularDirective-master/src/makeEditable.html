@@ -1,0 +1,5 @@
+<div contenteditable="{{ editable }}" data-ng-transclude data-ng-class="{editable: editable}">
+	
+</div>
+<input type="button" value="Edit" data-ng-click="editable = true" data-ng-show="!editable"/>
+<input type="button" value="Save" data-ng-click="editable = false" data-ng-show="editable"/>

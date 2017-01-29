@@ -1,0 +1,57 @@
+<h3>{{title}}</h3>
+<div>
+    <form name="phoneForm" class="form-horizontal" novalidate>
+        <div class="form-group" data-ng-class="{ 'has-error': (phoneForm.number.$touched && phoneForm.number.$invalid)  || submitted}">
+            <label for="number" class="control-label col-sm-2">Phone Number:</label>
+            <div class="col-sm-4">
+                <input type="text" class="form-control" id="number" name="number" placeHolder="Number" data-ng-model="phone.number" required
+                data-ng-minlength="10" data-ng-maxlength="10">
+            </div>
+            <div class="help-block" data-ng-show="phoneForm.number.$touched" data-ng-messages="phoneForm.number.$error">
+                <p data-ng-message="minlength">Phone number is too short.</p>
+                <p data-ng-message="maxlength">Phone number is too long.</p>
+                <p data-ng-message="required">Phone number is required.</p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="carrier" class="control-label col-sm-2">Carrier:</label>
+            <div class="col-sm-4">
+                <select data-ng-model="phone.carrier" id="carrier" class="form-control">
+                    <option data-ng-repeat="c in carriers" value="{{c.name}}">
+                        {{c.name}}
+                    </option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="company" class="control-label col-sm-2">Company:</label>
+            <div class="col-sm-4">
+                <select data-ng-model="phone.company" id="company" class="form-control">
+                    <option data-ng-repeat="c in companies" value="{{c.name}}">
+                        {{c.name}}
+                    </option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="type" class="control-label col-sm-2">Service Type:</label>
+            <div class="col-sm-4">
+                <select data-ng-model="phone.type" id="type" class="form-control">
+                    <option data-ng-repeat="t in serviceTypes" value="{{t.name}}">
+                        {{t.name}}
+                    </option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="note" class="control-label col-sm-2">Note:</label>
+            <div class="col-sm-4">
+                <input type="text" placeHolder="Notes" id="note" class="form-control" data-ng-model="phone.note">
+            </div>
+        </div>
+        <div class="col-sm-offset-2 col-sm-10" ">
+                <button data-ng-click="save() " class="btn btn-default ">{{saveBtn}}</button>
+                <button data-ng-click="reset() " formnovalidate class="btn btn-default ">Reset</button>
+            </div>
+        </form>
+    </div>

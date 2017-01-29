@@ -1,0 +1,41 @@
+<div class="row col-md-12">
+    <h4>Attendant Configuration</h4>
+    <form name="attendantForm" novalidate>
+        <div class="form-group">
+            <label for="description">Description</label>
+            <input type="text" class="form-control" id="description" name="description" placeHolder="Profile Description" data-ng-model="attendant.description"
+            required data-ng-minlength="1" data-ng-maxlength="100">
+            <div class="help-block" data-ng-show="attendantForm.description.$touched" data-ng-messages="phoneForm.number.$error">
+                <p data-ng-message="minlength">Description is too short.</p>
+                <p data-ng-message="maxlength">Description is too long.</p>
+                <p data-ng-message="required">Description is required.</p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="hub">Hub</label>
+            <div>               
+                <select data-ng-model="attendant.hub" id="hub" class="form-control">
+                    <option data-ng-repeat="h in attendant.hubs" value="{{h.hubId}}">
+                        {{h.number}}
+                    </option>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <label for="dnisGrid">DNIS</label>
+                <div id="dnisGrid" ui-grid="dnisOptions" class="minigrid"></div>
+            </div>
+            <div class="col-sm-8">
+                <label for="attrGrid">Attributes</label>
+                <div id="attrGrid" ui-grid="attributeOptions" class="minigrid"></div>
+            </div>
+        </div>
+        <div>
+            <!-- todo: image & image uploader -->
+        </div>
+        <div class="row col-sm-offset-4 col-sm-10">
+            <button data-ng-click="save()" class="btn btn-default">Save</button>
+        </div>
+    </form>
+</div>

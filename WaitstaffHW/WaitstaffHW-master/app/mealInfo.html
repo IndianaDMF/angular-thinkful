@@ -1,0 +1,32 @@
+<div class="center-block">
+    <form name="detailsForm" novalidate>
+        <h2>Enter the Meal Details</h2>
+        <div class="control-group"
+             ng-class="{error: (submitted && detailsForm.$invalid)}" >
+            <p><label>Base Meal Price: $</label><input class="input" name="mealPrice" type="number" id="mealPrice"
+                                                       placeholder="0" ng-model="meal.price" min="1.0"
+                                                       step=".01" required>
+            </p>
+
+            <p><label>Tax Rate: %</label><input class="input" name="taxRate" type="number" id="taxRate"
+                                                ng-model="meal.taxRate" placeholder="0"
+                                                min="1.0"
+                                                step=".1" required></p>
+
+            <p><label>Tip Percentage: %</label><input class="input" name="tipPercent" type="number" id="tipPercent" placeholder="0"
+                                                      ng-model="meal.tipRate"
+                                                      min="0.1" step=".1" required>
+            </p>
+        </div>
+    </form>
+    <div class="text-center">
+        <input type="button" value="Submit" ng-click="calculate()">
+        <input type="button" value="Cancel" ng-click="cancel()">
+    </div>
+    <h2 >Customer Charges</h2>
+    <p><label>Subtotal:&nbsp;</label>{{charges.subTotal | currency}}</p>
+    <p><label>Tip:&nbsp;</label>{{charges.tip | currency}}</p>
+    <hr/>
+    <p><label>Total:&nbsp;</label>{{charges.total | currency}}</p>
+</div>
+

@@ -1,0 +1,53 @@
+h2{
+    border-bottom:1px solid black;
+}
+
+img{
+    max-width:200px;
+    max-height: 200px;
+
+}
+
+label{
+    display: inline-block;
+    float: left;
+    clear: left;
+    text-align: right;
+    width:300px;
+}
+
+.name{
+    font-weight: bold;
+}
+
+.countries{
+    height: 700px;
+    overflow:auto;
+}
+
+.countries tr{
+    cursor: pointer;
+}
+
+.fixed{
+    width:50%;
+    float:left;
+    max-height: 300px;
+    max-width: 275px;
+}
+
+.loading:before {
+    position:absolute;
+    content:"";
+    left:0;
+    bottom:0;
+    right:0;
+    top:0;
+    z-index:1000;
+    background: rgba(255, 255, 255, 0.9) url('../content/loading-animation.gif') no-repeat center center;
+}
+
+.home{
+    padding-top:15px;
+    width:800px;
+}

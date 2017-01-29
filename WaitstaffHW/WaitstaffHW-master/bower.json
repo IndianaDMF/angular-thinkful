@@ -1,0 +1,24 @@
+{
+  "name": "WaitstaffHW",
+  "version": "0.0.0",
+  "homepage": "https://github.com/efinovation/WaitstaffHW",
+  "authors": [
+    "indianadmf@msn.com"
+  ],
+  "description": "tip calculator",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.7",
+    "angular-route": "~1.4.7",
+    "angular-messages": "~1.4.7",
+    "bootstrap-css": "~3.3.4",
+    "animate.css": "~3.4.0"
+  }
+}

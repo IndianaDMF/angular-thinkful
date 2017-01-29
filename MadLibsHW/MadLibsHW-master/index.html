@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mad Libs</title>
+    <link rel="stylesheet" type="text/css" href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css">
+    <link rel="stylesheet" type="text/css" href="style/style.css">
+</head>
+
+<body ng-app="madLibsApp">
+<div ng-controller="storyCtrl" class="container">
+    <div class="row">
+        <div class="span3 center">
+            <img class="happyFace" src="images\smile.png">
+        </div>
+        <div class="span8 right">
+            <img src="images\madLibsLogo.png">
+            <h2 class="text-center">Automate This!</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="span12">
+            <form name="wordForm" class="slide keepItTidy" ng-submit="submitWords()" novalidate ng-show="formState=='wordEntry'">
+                <h2>Provide the following words:</h2>
+                <div class="control-group" ng-class="{error: (wordForm.$invalid && wordForm.$submitted), success:(wordForm.$valid && wordForm.$submitted)}" >
+                <div >
+                    <p>
+                        <input type="radio" name="gender" value="male" required ng-model="gender.name">Male
+                        <input type="radio" name="gender" value="female" required ng-model="gender.name">Female
+                    </p>
+                    <p>
+                        <input type="text" id="firstName" name="firstName" ng-model="firstName" placeholder="First Name"
+                               required ng-minlength="2" ng-maxlength="20"/>
+                        <input type="text" id="job" name="job" ng-model="job" placeholder="Job"
+                               required ng-minlength="2" ng-maxlength="20"/>
+                        <input type="text" id="dirtyTask" name="dirtyTask" ng-model="dirtyTask" placeholder="Dirty Task"
+                                required ng-minlength="2" ng-maxlength="20"/>
+                    </p>
+
+                    <p>
+                        <input type="text" id="tediousTask" name="tediousTask" ng-model="tediousTask"  placeholder="Tedious Task"
+                               required ng-minlength="2" ng-maxlength="20"/>
+                        <input type="text" id="celebrity" name="celebrity" ng-model="celebrity" placeholder="Celebrity"
+                               required ng-minlength="2" ng-maxlength="20"/>
+                        <input type="text" id="skill" name="skill" ng-model="skill" placeholder="Skill"
+                               required ng-minlength="2" ng-maxlength="20"/>
+                    </p>
+
+                    <p>
+                        <input type="text" id="adjective" name="adjective" ng-model="adjective" placeholder="Adjective"
+                               required ng-minlength="2" ng-maxlength="20"/>
+                        <input type="text" id="obnoxiousPerson" name="obnoxiousPerson" ng-model="obnoxiousPerson"  placeholder="Obnoxious Person"
+                               required ng-minlength="2" ng-maxlength="20"/>
+                        <input type="number" id="number" name="number" ng-model="number" placeholder="Huge number"
+                               required min="20"/></p>
+
+                </div>
+                <div >
+                    <input type="submit" class="button"  value="Generate My Mad Lib">
+                </div>
+        </div>
+    </form>
+            <form name="storyForm" class="slide keepItTidy" ng-show="formState=='story'" ng-submit="appReset()">
+                <div >
+                    <p><u>{{firstName}}</u> is a <u>{{job}}</u> who loved technology. Although {{gender.pronounNominative}}
+                        loved
+                        parts of {{gender.possessivePronoun}} job, {{gender.pronounNominative}}
+                        absolutely hated to
+                        <u>{{tediousTask}}</u> and <u>{{dirtyTask}}</u>. So, <u>{{firstName}}</u> met with
+                        {{gender.possessivePronoun}} life mentor <u>{{celebrity}}</u>
+                        who told {{gender.pronoun}} to learn
+                        how to <u>{{skill}}</u> with Thinkful. Thinkful did not offer a course on <u>{{skill}}</u> so
+                        {{gender.pronounNominative}} studied
+                        programming instead.</p>
+
+                    <p>What a great decision! With {{gender.possessivePronoun}} new skills, <u>{{firstName}}</u> built a(n) <u>{{adjective}}</u>
+                        robot named
+                        <u>{{obnoxiousPerson}}</u> that not only loved <u>{{dirtyTask}}</u> but did it <u>{{number}}</u> times
+                        faster</p>
+                    <div >
+                        <input type="submit" class="button" value="Start Over">
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+<script src="https://code.angularjs.org/1.4.7/angular.min.js" type="text/javascript"></script>
+<script src="https://code.angularjs.org/1.4.7/angular-animate.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="app.js"></script>
+<script type="text/javascript" src="story-ctrl.js"></script>
+</body>
+
+</html>

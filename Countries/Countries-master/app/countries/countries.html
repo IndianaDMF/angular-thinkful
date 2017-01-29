@@ -1,0 +1,29 @@
+<div ng-controller="ccCountriesCtrl">
+    <div class="row countries">
+        <h2>Countries & Capitals</h2>
+        <table class="table table-striped">
+            <tr>
+                <th>Name</th>
+                <th>Country Code</th>
+                <th>Capital</th>
+                <th>Area in km2</th>
+                <th>Population</th>
+                <th>Continent</th>
+            </tr>
+            <tbody>
+            <tr ng-repeat="c in countries | orderBy: c.countryCode"
+                ng-click="getDetails(c)">
+                <td>{{c.countryName}}</td>
+                <td>{{c.countryCode}}</td>
+                <td>{{c.capital}}</td>
+                <td>{{c.areaInSqKm | number}}</td>
+                <td>{{c.population | number}}</td>
+                <td>{{c.continentName}}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="row text-center">
+        <button data-ng-click="go('/home')" class="btn btn-default">Home</button>
+    </div>
+</div>

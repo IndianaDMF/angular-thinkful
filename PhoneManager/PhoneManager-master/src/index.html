@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Phone Number Manager</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="../node_modules/angular-ui-grid/ui-grid.css" />
+    <link rel="stylesheet" href="../node_modules/angularjs-toaster/toaster.css" />
+    <link rel="stylesheet" href="../src/styles/style.css" />
+</head>
+
+<body data-ng-app="pnmApp">
+    <div class="container-fluid" data-ng-controller="mainCtrl">
+        <ul class="nav nav-tabs row">
+            <li data-ng-class="tabClass(tab)" data-ng-repeat="tab in tabs" tab="tab">
+                <a ui-sref="{{tab.link}}" data-ng-click="setSelectedTab(tab)">{{tab.label}}</a>
+            </li>
+        </ul>
+        <div ui-view></div>
+        <div>
+            <toaster-container></toaster-container>
+        </div>
+    </div>
+    <script src="../node_modules/angular/angular.js" type="text/javascript"></script>
+    <script src="../node_modules/angular-animate/angular-animate.js" type="text/javascript"></script>
+    <script src="../node_modules/angular-messages/angular-messages.min.js" type="text/javascript"></script>
+    <script src="../node_modules/angular-local-storage/dist/angular-local-storage.js" type="text/javascript"></script>
+    <script src="../node_modules/angular-ui-bootstrap/dist/ui-bootstrap.js" type="text/javascript"></script>
+    <script src="../node_modules/angular-ui-router/release/angular-ui-router.js" type="text/javascript"></script>
+    <script src="../node_modules/angular-ui-grid/ui-grid.min.js" type="text/javascript"></script>
+    <script src="../node_modules/angularjs-toaster/toaster.min.js" type="text/javascript"></script>
+    <script src="app.js" type="text/javascript"></script>
+</body>
+
+</html>

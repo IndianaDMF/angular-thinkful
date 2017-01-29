@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Country and Capitals App</title>
+    <!-- inject:css -->
+    <!-- endinject -->
+    <link rel="stylesheet" href="/content/app.css">
+    <link rel="stylesheet" href="/content/bootstrap/css/bootstrap.css">
+</head>
+<body data-ng-app="ccApp" ng-strict-di>
+<div ng-controller="ccCtrl" class="container">  
+    <div ng-class="{loading: isLoading}"></div>  
+    <div ng-view></div>
+</div>
+<!-- inject:js -->
+<!-- endinject -->
+<script src="./app/app.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>

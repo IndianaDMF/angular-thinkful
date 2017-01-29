@@ -1,0 +1,30 @@
+{
+  "name": "countries",
+  "description": "",
+  "main": "app/index.html",
+  "authors": [
+    "indianadmf@msn.com"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/efinovation/Countries",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "bootstrap.css#~2.3.2",
+    "animate.css": "~3.4.0"
+  },
+  "overrides": {
+    "bootstrap": {
+      "ignore": ["img/**", "js/**"]
+    },
+    "animate.css": {
+      "ignore": ["source/**"]
+    }
+  }
+}

@@ -1,0 +1,227 @@
+body {
+  background-clip: border-box;
+  background: #efefef scroll;
+  background-origin: padding-box;
+  background-size: auto;
+  color: rgb(51, 51, 51);
+  direction: ltr;
+  display: block;
+  font-family: Georgia, serif;
+  font-size: 100%;
+  font-weight: initial;
+  font-style: initial;
+  height: 636px;
+  line-height: 18px;
+  margin: 0 0 0 5px;
+  overflow-y: scroll;
+  padding: 0;
+  unicode-bidi: embed;
+}
+
+nav {
+  background: url('../images/twitter_web_sprite_bgs.png') repeat-x;
+  min-height: 40px !important;
+}
+
+button {
+  background: -webkit-gradient(linear, left top, left bottom, from(#305d9d), to(#65a9d7));
+  padding: 4px 10px;
+  margin: 5px;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 1) 0 1px 0;
+  text-shadow: rgba(0, 0, 0, .4) 0 1px 0;
+  color: white;
+  font-family: Georgia, serif;
+  text-decoration: none;
+  vertical-align: middle;
+}
+
+.nav-logo-link {
+  height: 12px;
+  padding: 10px 14px 18px;
+}
+
+.nav-sign-out {
+  float: right;
+  margin-top: -10px;
+}
+
+.bird-topbar-blue {
+  background-image: url('../images/twetter-logo.png');
+  background-position: 0 0;
+  width: 24px;
+  height: 21px;
+  float: left;
+  margin-top: 10px;
+}
+
+.container {
+  width: 865px;
+  text-align: center;
+}
+
+.page-container {
+  bottom: 0;
+  left: 0;
+  max-height: 750px;
+  min-height: 545px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.panel hr {
+  margin-top: 2px;
+  margin-bottom: 0;
+}
+
+.panel h4 span {
+  color: grey;
+  font-weight: lighter;
+}
+
+.panel form .form-group {
+  margin-bottom: 5px;
+  color: rgb(153, 153, 153);
+  font-size: 12px;
+}
+
+.panel form .form-group.or-links {
+  margin-top: 8px !important;
+  margin-bottom: 20px !important;
+}
+
+.panel form .form-group label {
+  font-weight: normal;
+}
+
+.panel form .form-group:first-child {
+  padding-top: 16px;
+}
+
+.panel form .form-group:last-child {
+  margin-bottom: 32px;
+}
+
+.panel form .form-group.tall:last-child {
+  margin-bottom: 50px;
+}
+
+.panel form .form-group input.left {
+  width: 68%;
+  float: left;
+}
+
+.panel form .form-group .btn.btn-warning {
+  color: black;
+}
+
+.panel form .clearfix {
+  padding: 1px;
+}
+
+.clearfix.top-space {
+  margin: 120px 0 0 0;
+}
+
+.clearfix.top-space.small {
+  margin: 50px 0 0 0;
+}
+
+.pad-10 {
+  padding: 0 10px;
+}
+
+.mar-top-5 {
+  margin-top: 5px;
+}
+
+.mar-top-15 {
+  margin-top: 15px;
+}
+
+.text-middle {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 40px;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.lighter {
+  font-weight: lighter;
+}
+
+.alert-float {
+  position: fixed;
+  top: 0;
+  z-index: 1050;
+  color: white;
+  width: 100%;
+  text-align: center;
+}
+
+.alert-float .alert {
+  z-index: 1050;
+  padding: 10px;
+}
+
+table.stats {
+  width: 258px;
+  margin: 14px -20px 0 -20px;
+}
+
+table.stats h4 {
+  margin: 0;
+}
+
+table.stats small {
+  font-size: 70%;
+}
+
+table.stats td:first-child {
+  padding-left: 18px;
+}
+
+.masthead-intro,
+.masthead-heading {
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.masthead {
+  padding: 6em 0;
+  text-align: center;
+}
+
+.masthead-heading {
+  margin-bottom: 0.1em;
+}
+
+.masthead-intro {
+  margin-top: -0.2em;
+}
+
+.info h1 {
+  text-align: center;
+}
+
+.info h2 {
+  margin: -.5em;
+}
+
+.info-container {
+  text-align: center;
+}
+
+.info {
+  vertical-align: top;
+  display: inline-block;
+  width: 30%;
+  padding-left: 30px;
+  box-sizing: border-box;
+  border-color: #1cb48a;
+}

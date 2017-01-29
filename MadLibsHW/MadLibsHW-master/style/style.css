@@ -1,0 +1,48 @@
+body{
+    font-family: Comic Sans, Comic Sans MS, cursive;
+}
+
+.keepItTidy{
+    width:800px;
+}
+
+.button{
+    font-family: Comic Sans, Comic Sans MS, cursive;
+}
+
+.right{
+    float:right;
+}
+
+.slide {
+    position: absolute;
+
+}
+
+.happyFace{
+    animation: rotate 4s linear infinite;
+    z-index:-1;
+}
+
+.slide.ng-hide-remove,
+.slide.ng-hide-add {
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
+}
+.slide.ng-hide-remove {
+    left: 100%;
+}
+.slide.ng-hide-remove-active {
+    left: 0;
+}
+.slide.ng-hide-add {
+    left: 0;
+}
+.slide.ng-hide-add-active {
+    left: -100%;
+}
+
+@-webkit-keyframes rotate {
+    from { -webkit-transform: rotate(0deg)}
+    to   { -webkit-transform: rotate(360deg)}
+}

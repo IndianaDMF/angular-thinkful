@@ -1,0 +1,25 @@
+<div data-ng-controller="ccDetailsCtrl">
+    <h2 class="text-center">Countries and Capitals</h2>    
+        <div class="row">
+            <div class="center-block">
+                <p><label class="name">{{country.countryName}}</label>&nbsp;</p>
+                <p><label>Population of Country:</label>&nbsp;{{country.population | number}}</p>
+                <p><label>Area:</label>&nbsp;{{country.areaInSqKm | number}}</p>
+                <p><label>Capital:</label>&nbsp;{{country.capital}}</p>
+                <p><label>Population of Capital:</label>&nbsp;{{country.capitalPopulation | number}}</p>
+                <p><label>Three neighbors:</label>&nbsp;{{country.neighbors}}</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="fixed">
+                <img  ng-src="http://www.geonames.org/img/country/250/{{country.countryCode}}.png" />
+            </div>
+            <div class="fixed"> 
+                <img  ng-src="http://www.geonames.org/flags/x/{{country.countryCode | lowercase}}.gif" />
+            </div>
+        </div>
+        <div class="row text-center">
+            <button ng-click="go('/home')" class="btn btn-default">Home</button>
+            <button ng-click="go('/countries')" class="btn btn-default">Browse Countries</button>
+        </div>    
+</div>
